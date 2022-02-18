@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E80A535327C0431500DB2136 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A535227C0431500DB2136 /* CollectionViewTableViewCell.swift */; };
+		E80A535527C04D7200DB2136 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A535427C04D7200DB2136 /* HeroHeaderUIView.swift */; };
 		E893120C27BBF69B003C00E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893120B27BBF69B003C00E2 /* AppDelegate.swift */; };
 		E893120E27BBF69B003C00E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893120D27BBF69B003C00E2 /* SceneDelegate.swift */; };
 		E893121027BBF69B003C00E2 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893120F27BBF69B003C00E2 /* MainTabBarViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E80A535227C0431500DB2136 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		E80A535427C04D7200DB2136 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 		E893120827BBF69B003C00E2 /* NetflixClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E893120B27BBF69B003C00E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E893120D27BBF69B003C00E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +47,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E80A534D27C0427900DB2136 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E80A535227C0431500DB2136 /* CollectionViewTableViewCell.swift */,
+				E80A535427C04D7200DB2136 /* HeroHeaderUIView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E80A534E27C0427E00DB2136 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E80A534F27C0428700DB2136 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E80A535027C042B700DB2136 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		E80A535127C042C700DB2136 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E89311FF27BBF69B003C00E2 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +103,11 @@
 		E893120A27BBF69B003C00E2 /* NetflixClone */ = {
 			isa = PBXGroup;
 			children = (
+				E80A535027C042B700DB2136 /* Managers */,
+				E80A535127C042C700DB2136 /* Resources */,
+				E80A534F27C0428700DB2136 /* Models */,
+				E80A534D27C0427900DB2136 /* Views */,
+				E80A534E27C0427E00DB2136 /* ViewModels */,
 				E893123F27BC21B4003C00E2 /* Controllers */,
 				E893120B27BBF69B003C00E2 /* AppDelegate.swift */,
 				E893120D27BBF69B003C00E2 /* SceneDelegate.swift */,
@@ -156,9 +202,11 @@
 			files = (
 				E893124527BC2254003C00E2 /* SearchViewController.swift in Sources */,
 				E893121027BBF69B003C00E2 /* MainTabBarViewController.swift in Sources */,
+				E80A535327C0431500DB2136 /* CollectionViewTableViewCell.swift in Sources */,
 				E893120C27BBF69B003C00E2 /* AppDelegate.swift in Sources */,
 				E893124727BC4D7D003C00E2 /* DownloadViewController.swift in Sources */,
 				E893120E27BBF69B003C00E2 /* SceneDelegate.swift in Sources */,
+				E80A535527C04D7200DB2136 /* HeroHeaderUIView.swift in Sources */,
 				E893124327BC2230003C00E2 /* UpcomingViewController.swift in Sources */,
 				E893124127BC21DB003C00E2 /* HomeViewController.swift in Sources */,
 			);
