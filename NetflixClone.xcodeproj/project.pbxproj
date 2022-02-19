@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		E80A535327C0431500DB2136 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A535227C0431500DB2136 /* CollectionViewTableViewCell.swift */; };
 		E80A535527C04D7200DB2136 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A535427C04D7200DB2136 /* HeroHeaderUIView.swift */; };
+		E84713BD27C18D28001AE29C /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84713BC27C18D28001AE29C /* APICaller.swift */; };
+		E84713BF27C19310001AE29C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84713BE27C19310001AE29C /* Movie.swift */; };
+		E84713C127C19EA9001AE29C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84713C027C19EA9001AE29C /* Extensions.swift */; };
 		E893120C27BBF69B003C00E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893120B27BBF69B003C00E2 /* AppDelegate.swift */; };
 		E893120E27BBF69B003C00E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893120D27BBF69B003C00E2 /* SceneDelegate.swift */; };
 		E893121027BBF69B003C00E2 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893120F27BBF69B003C00E2 /* MainTabBarViewController.swift */; };
@@ -23,6 +26,9 @@
 /* Begin PBXFileReference section */
 		E80A535227C0431500DB2136 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		E80A535427C04D7200DB2136 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
+		E84713BC27C18D28001AE29C /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		E84713BE27C19310001AE29C /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		E84713C027C19EA9001AE29C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E893120827BBF69B003C00E2 /* NetflixClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E893120B27BBF69B003C00E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E893120D27BBF69B003C00E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +72,7 @@
 		E80A534F27C0428700DB2136 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E84713BE27C19310001AE29C /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -73,6 +80,7 @@
 		E80A535027C042B700DB2136 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				E84713BC27C18D28001AE29C /* APICaller.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -80,6 +88,7 @@
 		E80A535127C042C700DB2136 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E84713C027C19EA9001AE29C /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -203,11 +212,14 @@
 				E893124527BC2254003C00E2 /* SearchViewController.swift in Sources */,
 				E893121027BBF69B003C00E2 /* MainTabBarViewController.swift in Sources */,
 				E80A535327C0431500DB2136 /* CollectionViewTableViewCell.swift in Sources */,
+				E84713BD27C18D28001AE29C /* APICaller.swift in Sources */,
 				E893120C27BBF69B003C00E2 /* AppDelegate.swift in Sources */,
 				E893124727BC4D7D003C00E2 /* DownloadViewController.swift in Sources */,
 				E893120E27BBF69B003C00E2 /* SceneDelegate.swift in Sources */,
+				E84713C127C19EA9001AE29C /* Extensions.swift in Sources */,
 				E80A535527C04D7200DB2136 /* HeroHeaderUIView.swift in Sources */,
 				E893124327BC2230003C00E2 /* UpcomingViewController.swift in Sources */,
+				E84713BF27C19310001AE29C /* Movie.swift in Sources */,
 				E893124127BC21DB003C00E2 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

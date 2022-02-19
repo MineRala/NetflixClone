@@ -10,7 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    let sectionTitles: [String] = ["Trendıng Movıes", "Popular", "Trendıng Tv", "Upcomıng Movıes", "Top Rated"]
+    let sectionTitles: [String] = ["Trending Movies", "Trending Tv", "Popular", "Upcoming Movies", "Top Rated"]
     
     private let homeFeedTable : UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
@@ -29,6 +29,8 @@ class HomeViewController: UIViewController {
         // Header'ın boyutlarını belirledim. Header -> Büyük fotoğraf kısmı.
         let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
         homeFeedTable.tableHeaderView = headerView
+        
+        getTrendingMovies()
     }
     
     override func viewDidLayoutSubviews() {
@@ -46,6 +48,17 @@ class HomeViewController: UIViewController {
             UIBarButtonItem(image: UIImage(systemName: "play.rectangle"), style: .done, target: self, action: nil)
         ]
         navigationController?.navigationBar.tintColor = .white
+    }
+    
+    private func getTrendingMovies() {
+        APICaller.shared.getTrendingMovies { results in
+            switch results {
+            case .success(let movies):
+                print(movies)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 
@@ -84,7 +97,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         header.textLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
         header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
         header.textLabel?.textColor = .white
-        header.textLabel?.text = header.textLabel?.text?.lowercased()
+        header.textLabel?.text = header.textLabel?.text?.capatilizeFirstLetter()
     }
     
     // NavigationBar'ı hareket ettiren fonksiyon. Y ekseni hesaplaması yaptık. offset kadar daha scroll olabiliyor. Yukarı tarafa doğru.
