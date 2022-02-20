@@ -12,6 +12,7 @@
 		E84713BD27C18D28001AE29C /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84713BC27C18D28001AE29C /* APICaller.swift */; };
 		E84713BF27C19310001AE29C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84713BE27C19310001AE29C /* Movie.swift */; };
 		E84713C127C19EA9001AE29C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84713C027C19EA9001AE29C /* Extensions.swift */; };
+		E84713C327C270AE001AE29C /* Tv.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84713C227C270AE001AE29C /* Tv.swift */; };
 		E893120C27BBF69B003C00E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893120B27BBF69B003C00E2 /* AppDelegate.swift */; };
 		E893120E27BBF69B003C00E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893120D27BBF69B003C00E2 /* SceneDelegate.swift */; };
 		E893121027BBF69B003C00E2 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893120F27BBF69B003C00E2 /* MainTabBarViewController.swift */; };
@@ -29,6 +30,7 @@
 		E84713BC27C18D28001AE29C /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		E84713BE27C19310001AE29C /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		E84713C027C19EA9001AE29C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E84713C227C270AE001AE29C /* Tv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tv.swift; sourceTree = "<group>"; };
 		E893120827BBF69B003C00E2 /* NetflixClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E893120B27BBF69B003C00E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E893120D27BBF69B003C00E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				E84713BE27C19310001AE29C /* Movie.swift */,
+				E84713C227C270AE001AE29C /* Tv.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E893124527BC2254003C00E2 /* SearchViewController.swift in Sources */,
+				E84713C327C270AE001AE29C /* Tv.swift in Sources */,
 				E893121027BBF69B003C00E2 /* MainTabBarViewController.swift in Sources */,
 				E80A535327C0431500DB2136 /* CollectionViewTableViewCell.swift in Sources */,
 				E84713BD27C18D28001AE29C /* APICaller.swift in Sources */,
