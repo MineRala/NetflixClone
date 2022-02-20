@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct TrendingMoviesResponse: Decodable {
-    let results: [Movie]
+struct TrendingTitleResponse: Decodable {
+    let results: [Title]
     
 }
 
-struct Movie: Decodable {
+struct Title: Decodable {
     let id: Int
     let meadia_type: String?
     let original_name: String?
