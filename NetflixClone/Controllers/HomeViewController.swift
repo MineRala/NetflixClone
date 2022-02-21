@@ -30,7 +30,6 @@ class HomeViewController: UIViewController {
         let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
         homeFeedTable.tableHeaderView = headerView
         
-        fetchData()
     }
     
     override func viewDidLayoutSubviews() {
@@ -49,22 +48,7 @@ class HomeViewController: UIViewController {
         ]
         navigationController?.navigationBar.tintColor = .white
     }
-    
-    private func fetchData() {
-//        APICaller.shared.getTrendingMovies { results in
-//            switch results {
-//            case .success(let movies):
-//                print(movies)
-//            case .failure(let error):
-//                print(error)
-//            }
-        
-        APICaller.shared.getTopRatedTvs { results in
-            
-        }
-     }
-    }
-
+}
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     

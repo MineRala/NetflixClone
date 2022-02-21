@@ -38,7 +38,7 @@ class APICaller {
             do{
                 let decoder = JSONDecoder()
                 let tvs = try decoder.decode(TrendingTitleResponse.self, from: data)
-                print(tvs)
+                completion(.success(tvs.results))
             } catch {
                 completion(.failure(APIError.failedTogetData))
             }
@@ -55,7 +55,7 @@ class APICaller {
             do {
                 let decoder = JSONDecoder()
                 let movies = try decoder.decode(TrendingTitleResponse.self, from: data)
-                print(movies)
+                completion(.success(movies.results))
             } catch {
                 completion(.failure(APIError.failedTogetData))
             }
@@ -72,7 +72,7 @@ class APICaller {
             do {
                 let decoder = JSONDecoder()
                 let movies = try decoder.decode(TrendingTitleResponse.self, from: data)
-                print(movies)
+                completion(.success(movies.results))
             } catch {
                 completion(.failure(APIError.failedTogetData))
             }
@@ -89,7 +89,7 @@ class APICaller {
             do{
                 let decoder = JSONDecoder()
                 let tvs = try decoder.decode(TrendingTitleResponse.self, from: data)
-                print(tvs)
+                completion(.success(tvs.results))
             } catch {
                 completion(.failure(APIError.failedTogetData))
             }
@@ -106,7 +106,7 @@ class APICaller {
             do{
                 let decoder = JSONDecoder()
                 let movies = try decoder.decode(TrendingTitleResponse.self, from: data)
-                print(movies)
+                completion(.success(movies.results))
             } catch {
                 completion(.failure(APIError.failedTogetData))
             }
@@ -123,7 +123,7 @@ class APICaller {
             do{
                 let decoder = JSONDecoder()
                 let tvs = try decoder.decode(TrendingTitleResponse.self, from: data)
-                print(tvs)
+                completion(.success(tvs.results))
             } catch {
                 completion(.failure(APIError.failedTogetData))
             }
