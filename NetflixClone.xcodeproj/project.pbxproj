@@ -17,6 +17,8 @@
 		E84713CA27C29AA6001AE29C /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84713C927C29AA6001AE29C /* TitleCollectionViewCell.swift */; };
 		E84713CD27C2B152001AE29C /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = E84713CC27C2B152001AE29C /* SDWebImage */; };
 		E84713CF27C2B152001AE29C /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E84713CE27C2B152001AE29C /* SDWebImageMapKit */; };
+		E86B92CC27C43A7C00FC2DBD /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86B92CB27C43A7C00FC2DBD /* Urls.swift */; };
+		E86B92D127C43ACF00FC2DBD /* Sections.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86B92D027C43ACF00FC2DBD /* Sections.swift */; };
 		E893120C27BBF69B003C00E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893120B27BBF69B003C00E2 /* AppDelegate.swift */; };
 		E893120E27BBF69B003C00E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893120D27BBF69B003C00E2 /* SceneDelegate.swift */; };
 		E893121027BBF69B003C00E2 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893120F27BBF69B003C00E2 /* MainTabBarViewController.swift */; };
@@ -37,6 +39,8 @@
 		E84713C527C298AB001AE29C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E84713C727C298C5001AE29C /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		E84713C927C29AA6001AE29C /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		E86B92CB27C43A7C00FC2DBD /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
+		E86B92D027C43ACF00FC2DBD /* Sections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sections.swift; sourceTree = "<group>"; };
 		E893120827BBF69B003C00E2 /* NetflixClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E893120B27BBF69B003C00E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E893120D27BBF69B003C00E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +117,15 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		E86B92CF27C43AC300FC2DBD /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				E86B92D027C43ACF00FC2DBD /* Sections.swift */,
+				E86B92CB27C43A7C00FC2DBD /* Urls.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		E89311FF27BBF69B003C00E2 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +145,7 @@
 		E893120A27BBF69B003C00E2 /* NetflixClone */ = {
 			isa = PBXGroup;
 			children = (
+				E86B92CF27C43AC300FC2DBD /* Enums */,
 				E84713C427C29891001AE29C /* Utilities */,
 				E80A535027C042B700DB2136 /* Managers */,
 				E80A535127C042C700DB2136 /* Resources */,
@@ -241,6 +255,7 @@
 				E893121027BBF69B003C00E2 /* MainTabBarViewController.swift in Sources */,
 				E80A535327C0431500DB2136 /* CollectionViewTableViewCell.swift in Sources */,
 				E84713BD27C18D28001AE29C /* APICaller.swift in Sources */,
+				E86B92D127C43ACF00FC2DBD /* Sections.swift in Sources */,
 				E893120C27BBF69B003C00E2 /* AppDelegate.swift in Sources */,
 				E893124727BC4D7D003C00E2 /* DownloadViewController.swift in Sources */,
 				E84713C827C298C5001AE29C /* Errors.swift in Sources */,
@@ -248,6 +263,7 @@
 				E84713C627C298AB001AE29C /* Constants.swift in Sources */,
 				E84713C127C19EA9001AE29C /* Extensions.swift in Sources */,
 				E80A535527C04D7200DB2136 /* HeroHeaderUIView.swift in Sources */,
+				E86B92CC27C43A7C00FC2DBD /* Urls.swift in Sources */,
 				E893124327BC2230003C00E2 /* UpcomingViewController.swift in Sources */,
 				E84713CA27C29AA6001AE29C /* TitleCollectionViewCell.swift in Sources */,
 				E84713BF27C19310001AE29C /* Title.swift in Sources */,
