@@ -26,7 +26,6 @@ class SearchViewController: UIViewController {
         
         searchTableView.dataSource = self
         searchTableView.delegate = self
-
     }
     
     override func viewDidLayoutSubviews() {
@@ -45,6 +44,4 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = "Mine"
         return cell
     }
-    
-    
 }

@@ -37,7 +37,8 @@ class UpcomingViewController: UIViewController {
     }
     
     private func fetchUpcoming() {
-        APICaller.shared.getUpcomingMovies { [weak self] result in
+        
+        APICaller.shared.getDatas(dataType: UrlForTitles.UpcomingMovies.url){ [weak self] result in
             switch result {
             case .success(let titles):
                 self?.titles = titles

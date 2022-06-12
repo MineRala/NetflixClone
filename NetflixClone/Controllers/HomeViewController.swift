@@ -10,7 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    let sectionTitles: [String] = ["Trending Movies", "Trending Tv", "Popular Movies", "Popular Tv", "Upcoming Movies", "Top Rated Movies", "Top Rated Tv"]
+    let sectionTitles: [String] = ["Trendıng Movıes", "Trendıng Tv", "Popular Movıes", "Popular Tv", "Upcomıng Movıes", "Top Rated Movıes", "Top Rated Tv"]
     
     private let homeFeedTable : UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
@@ -29,7 +29,6 @@ class HomeViewController: UIViewController {
         // Header'ın boyutlarını belirledim. Header -> Büyük fotoğraf kısmı.
         let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
         homeFeedTable.tableHeaderView = headerView
-        
     }
     
     override func viewDidLayoutSubviews() {
@@ -67,80 +66,42 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch indexPath.section {
             case Sections.TrendingMovies.rawValue:
-                APICaller.shared.getTrendingMovies { result in
-                    switch result {
-                    case .success(let titles):
-                        cell.configure(with: titles)
-                    case .failure(let error):
-                        print(error.localizedDescription)
-                }
-            }
+            apiCallerForAllTypes(dataType: UrlForTitles.TrendingMovies.url, cell: cell)
                 
             case Sections.TrendingTv.rawValue:
-                APICaller.shared.getTrendingTvs { result in
-                    switch result {
-                    case .success(let titles):
-                        cell.configure(with: titles)
-                    case .failure(let error):
-                        print(error.localizedDescription)
-                }
-            }
+            apiCallerForAllTypes(dataType: UrlForTitles.TrendingTv.url, cell: cell)
                 
             case Sections.PopularMovies.rawValue:
-                APICaller.shared.getPopularMovies { result in
-                    switch result {
-                    case .success(let titles):
-                        cell.configure(with: titles)
-                    case .failure(let error):
-                        print(error.localizedDescription)
-                }
-            }
+            apiCallerForAllTypes(dataType: UrlForTitles.PopularMovies.url, cell: cell)
                 
             case Sections.PopularTv.rawValue:
-                APICaller.shared.getPopularTvs { result in
-                    switch result {
-                    case .success(let titles):
-                        cell.configure(with: titles)
-                    case .failure(let error):
-                        print(error.localizedDescription)
-                }
-            }
+            apiCallerForAllTypes(dataType: UrlForTitles.PopularTv.url, cell: cell)
                 
             case Sections.UpcomingMovies.rawValue:
-                APICaller.shared.getUpcomingMovies { result in
-                    switch result {
-                    case .success(let titles):
-                        cell.configure(with: titles)
-                    case .failure(let error):
-                        print(error.localizedDescription)
-                }
-            }
+            apiCallerForAllTypes(dataType: UrlForTitles.UpcomingMovies.url, cell: cell)
                 
             case Sections.TopRatedMovies.rawValue:
-                APICaller.shared.getTrendingMovies { result in
-                    switch result {
-                    case .success(let titles):
-                        cell.configure(with: titles)
-                    case .failure(let error):
-                        print(error.localizedDescription)
-                }
-            }
+            apiCallerForAllTypes(dataType: UrlForTitles.TopRatedMovies.url, cell: cell)
                 
             case Sections.TopRatedTv.rawValue:
-                APICaller.shared.getTopRatedTvs { result in
-                    switch result {
-                    case .success(let titles):
-                        cell.configure(with: titles)
-                    case .failure(let error):
-                        print(error.localizedDescription)
-                }
-            }
+            apiCallerForAllTypes(dataType: UrlForTitles.TopRatedTvs.url, cell: cell)
                 
             default:
                 return UITableViewCell()
             }
         
         return cell
+    }
+    
+    func apiCallerForAllTypes(dataType:String, cell: CollectionViewTableViewCell) {
+        APICaller.shared.getDatas(dataType: dataType) { result in
+                switch result {
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error.localizedDescription)
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -160,7 +121,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let header = view as? UITableViewHeaderFooterView else { return }
         header.textLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
         header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
-        header.textLabel?.textColor = .white
+        header.textLabel?.textColor = .black.withAlphaComponent(0.5)
         header.textLabel?.text = header.textLabel?.text?.capatilizeFirstLetter()
     }
     
@@ -170,6 +131,4 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let offset = scrollView.contentOffset.y + defaultOffset // contentOffset.y ise navigationBar'ın y ekseni.
         navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0, -offset)) // y ekseni offset kadar yukarı gidebiliyor.
     }
-    
-   
 }
