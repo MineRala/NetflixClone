@@ -17,13 +17,15 @@ class TitleTableViewCell: UITableViewCell {
         let image = UIImage(systemName: "play.circle", withConfiguration: UIImage.SymbolConfiguration(pointSize: 30))
         button.setImage(image, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.tintColor = .white
+        button.tintColor = .black
         return button
     }()
     
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
         return label
     }()
     
@@ -52,8 +54,8 @@ class TitleTableViewCell: UITableViewCell {
     private func applyConstraints() {
         let titlesPosterUIImageViewConstraints = [
             titlesPosterUIImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            titlesPosterUIImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
-            titlesPosterUIImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
+            titlesPosterUIImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0),
+            titlesPosterUIImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0),
             titlesPosterUIImageView.widthAnchor.constraint(equalToConstant: 100)
         ]
         
@@ -63,9 +65,14 @@ class TitleTableViewCell: UITableViewCell {
         ]
         
         let playTitleButtonConstraints = [
+            playTitleButton.heightAnchor.constraint(equalToConstant: 48),
+            playTitleButton.widthAnchor.constraint(equalToConstant: 48),
             playTitleButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
             playTitleButton.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ]
+        
+        titleLabel.trailingAnchor.constraint(equalTo: playTitleButton.leadingAnchor, constant: -10).isActive = true
+    
         
         NSLayoutConstraint.activate(titlesPosterUIImageViewConstraints)
         NSLayoutConstraint.activate(titleLabelConstraints)

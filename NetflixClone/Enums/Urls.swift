@@ -15,6 +15,7 @@ enum UrlForTitles {
     case PopularTv
     case TopRatedMovies
     case TopRatedTvs
+    case discoverMovie
     
     var url: String {
         switch self {
@@ -32,6 +33,8 @@ enum UrlForTitles {
             return "\(Constants.baseUrl)/3/movie/top_rated?api_key=\(Constants.apiKey)&language=en-US&page=1"
         case .TopRatedTvs:
             return "\(Constants.baseUrl)/3/tv/top_rated?api_key=\(Constants.apiKey)&language=en-US&page=1"
+        case .discoverMovie:
+            return "\(Constants.baseUrl)/3/discover/movie?api_key=\(Constants.apiKey)&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate"
         }
     }
 }
