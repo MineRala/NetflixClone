@@ -1,0 +1,20 @@
+disabled_rules:
+- control_statement
+- identifier_name
+opt_in_rules:
+- empty_count
+included:
+- NetflixClone
+excluded:
+- Pods
+force_cast: warning # implicitly
+line_length: 110
+file_length:
+warning: 500
+error: 1200
+type_name:
+min_length: 4 # only warning
+max_length: # warning and error
+warning: 40
+error: 50
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji)
