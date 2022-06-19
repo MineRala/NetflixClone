@@ -36,6 +36,7 @@ class SearchViewController: UIViewController {
         discoverTable.dataSource = self
         discoverTable.delegate = self
         navigationItem.searchController = searchController
+        navigationController?.navigationBar.tintColor  = .black
         
         fetchDiscoverMovies()
     }
