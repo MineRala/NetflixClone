@@ -73,7 +73,6 @@ class TitleTableViewCell: UITableViewCell {
         
         titleLabel.trailingAnchor.constraint(equalTo: playTitleButton.leadingAnchor, constant: -10).isActive = true
     
-        
         NSLayoutConstraint.activate(titlesPosterUIImageViewConstraints)
         NSLayoutConstraint.activate(titleLabelConstraints)
         NSLayoutConstraint.activate(playTitleButtonConstraints)

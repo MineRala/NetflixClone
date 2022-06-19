@@ -33,7 +33,6 @@ class MainTabBarViewController: UITabBarController {
         vc4.title = "Downloads"
     
         // NavigationController'ı setledim
-        setViewControllers([vc1,vc2,vc3,vc4], animated: true)
+        setViewControllers([vc1, vc2, vc3, vc4], animated: true)
     }
 }
-

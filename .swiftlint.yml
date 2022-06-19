@@ -1,6 +1,7 @@
 disabled_rules:
 - control_statement
 - identifier_name
+- trailing_whitespace
 opt_in_rules:
 - empty_count
 included:
@@ -8,7 +9,7 @@ included:
 excluded:
 - Pods
 force_cast: warning # implicitly
-line_length: 110
+line_length: 220
 file_length:
 warning: 500
 error: 1200

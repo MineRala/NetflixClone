@@ -47,7 +47,7 @@ class SearchViewController: UIViewController {
     }
     
     private func fetchDiscoverMovies () {
-        APICaller.shared.getDatas(dataType: UrlForTitles.discoverMovie.url){ [weak self] result in
+        APICaller.shared.getDatas(dataType: UrlForTitles.discoverMovie.url) { [weak self] result in
             switch result {
             case .success(let titles):
                 self?.titles = titles

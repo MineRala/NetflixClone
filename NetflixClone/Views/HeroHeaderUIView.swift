@@ -29,7 +29,7 @@ class HeroHeaderUIView: UIView {
         return button
     }()
     
-    private let heroImageView : UIImageView = {
+    private let heroImageView: UIImageView = {
        let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true

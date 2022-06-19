@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
     
     let sectionTitles: [String] = ["Trendıng Movıes", "Trendıng Tv", "Popular Movıes", "Popular Tv", "Upcomıng Movıes", "Top Rated Movıes", "Top Rated Tv"]
     
-    private let homeFeedTable : UITableView = {
+    private let homeFeedTable: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
         table.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
         return table
@@ -65,35 +65,35 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         switch indexPath.section {
-            case Sections.TrendingMovies.rawValue:
+        case Sections.TrendingMovies.rawValue:
             apiCallerForAllTypes(dataType: UrlForTitles.TrendingMovies.url, cell: cell)
                 
-            case Sections.TrendingTv.rawValue:
+        case Sections.TrendingTv.rawValue:
             apiCallerForAllTypes(dataType: UrlForTitles.TrendingTv.url, cell: cell)
                 
-            case Sections.PopularMovies.rawValue:
+        case Sections.PopularMovies.rawValue:
             apiCallerForAllTypes(dataType: UrlForTitles.PopularMovies.url, cell: cell)
                 
-            case Sections.PopularTv.rawValue:
+        case Sections.PopularTv.rawValue:
             apiCallerForAllTypes(dataType: UrlForTitles.PopularTv.url, cell: cell)
                 
-            case Sections.UpcomingMovies.rawValue:
+        case Sections.UpcomingMovies.rawValue:
             apiCallerForAllTypes(dataType: UrlForTitles.UpcomingMovies.url, cell: cell)
                 
-            case Sections.TopRatedMovies.rawValue:
+        case Sections.TopRatedMovies.rawValue:
             apiCallerForAllTypes(dataType: UrlForTitles.TopRatedMovies.url, cell: cell)
                 
-            case Sections.TopRatedTv.rawValue:
+        case Sections.TopRatedTv.rawValue:
             apiCallerForAllTypes(dataType: UrlForTitles.TopRatedTvs.url, cell: cell)
                 
-            default:
-                return UITableViewCell()
-            }
+        default:
+            return UITableViewCell()
+        }
         
         return cell
     }
     
-    func apiCallerForAllTypes(dataType:String, cell: CollectionViewTableViewCell) {
+    func apiCallerForAllTypes(dataType: String, cell: CollectionViewTableViewCell) {
         APICaller.shared.getDatas(dataType: dataType) { result in
                 switch result {
                 case .success(let titles):
